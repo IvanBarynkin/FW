@@ -60,38 +60,38 @@ class EmployeeBook {
     }
 
     public void minSalaryEmployee() {
-        Employee loh = null;
+        Employee employee = null;
         for (int i = 0; i < this.size; i++) {
-            if (Employees[i] != null && loh == null) {
-                loh = Employees[i];
+            if (Employees[i] != null && employee == null) {
+                employee = Employees[i];
                 continue;
             }
-            if (Employees[i] != null && loh.getSalary() > Employees[i].getSalary()) {
-                loh = Employees[i];
+            if (Employees[i] != null && employee.getSalary() > Employees[i].getSalary()) {
+                employee = Employees[i];
             }
         }
-        if (loh == null) {
+        if (employee == null) {
             System.out.println("Сотрудник не найден");
         } else {
-            System.out.println("Сотрудник с минимальной зарплатой: " + loh);
+            System.out.println("Сотрудник с минимальной зарплатой: " + employee);
         }
     }
 
     public void maxSalaryEmployee() {
-        Employee sigma = null;
+        Employee employee = null;
         for (int i = 0; i < this.size; i++) {
-            if (Employees[i] != null && sigma == null) {
-                sigma = Employees[i];
+            if (Employees[i] != null && employee == null) {
+                employee = Employees[i];
                 continue;
             }
-            if (Employees[i] != null && sigma.getSalary() < Employees[i].getSalary()) {
-                sigma = Employees[i];
+            if (Employees[i] != null && employee.getSalary() < Employees[i].getSalary()) {
+                employee = Employees[i];
             }
         }
-        if (sigma == null) {
+        if (employee == null) {
             System.out.println("Сотрудник не найден");
         } else {
-            System.out.println("Сотрудник с максимальной зарплатой: " + sigma);
+            System.out.println("Сотрудник с максимальной зарплатой: " + employee);
         }
     }
 
@@ -132,44 +132,44 @@ class EmployeeBook {
     // Методы для работы с конкретными отделами
 
     public void minSalaryEmployeeDep(int department) {
-        Employee loh = null;
+        Employee employee = null;
         for (int i = 0; i < this.size; i++) {
             if (Employees[i] == null || Employees[i].getDepartment() != department) {
                 continue;
             }
-            if (loh == null) {
-                loh = Employees[i];
+            if (employee == null) {
+                employee = Employees[i];
                 continue;
             }
-            if (loh.getSalary() > Employees[i].getSalary()) {
-                loh = Employees[i];
+            if (employee.getSalary() > Employees[i].getSalary()) {
+                employee = Employees[i];
             }
         }
-        if (loh == null) {
+        if (employee == null) {
             System.out.println("Сотрудник не найден");
         } else {
-            System.out.println("Сотрудник с минимальной зарплатой в отделе " + department + " : " + loh);
+            System.out.println("Сотрудник с минимальной зарплатой в отделе " + department + " : " + employee);
         }
     }
 
     public void maxSalaryEmployeeDep(int department) {
-        Employee loh = null;
+        Employee employee = null;
         for (int i = 0; i < this.size; i++) {
             if (Employees[i] == null || Employees[i].getDepartment() != department) {
                 continue;
             }
-            if (loh == null) {
-                loh = Employees[i];
+            if (employee == null) {
+                employee = Employees[i];
                 continue;
             }
-            if (loh.getSalary() < Employees[i].getSalary()) {
-                loh = Employees[i];
+            if (employee.getSalary() < Employees[i].getSalary()) {
+                employee = Employees[i];
             }
         }
-        if (loh == null) {
+        if (employee == null) {
             System.out.println("Сотрудник не найден");
         } else {
-            System.out.println("Сотрудник с минимальной зарплатой в отделе " + department + " : " + loh);
+            System.out.println("Сотрудник с минимальной зарплатой в отделе " + department + " : " + employee);
         }
     }
 
